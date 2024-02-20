@@ -13,24 +13,31 @@ It aims to be a very safe and expressive yet simple systems programming language
 Well… i am working on a PoC c with algebraic effects to regular c translator… A snippet of code for it:
 
 ```
+-- just #include "stdio.h"
 include stdio
 
+-- algebraic effect declaration!
 effect Console
+    -- operation that provides a c string and requires back the unit (it's literally c's void _for now_)
     log(*char) unit
 end
 
+-- array of c strings, you know
 const msgs: *const *const char = [
     "say gex\n",
     "meow~~~\n"
 ]
 
+-- guess what? it's the main
 function main() i32 do
+    -- block to handle effects
     try
         var i: i32 = 0
         while i < 2 do
             log(msgs[i])
             i += 1
         end
+    -- handler of the Console effect declared above
     handle Console
         log(msg)
             printf("%s\n", msg)
