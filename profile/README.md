@@ -7,7 +7,8 @@ It aims to be a safe and expressive yet simple systems programming language. And
 * algebraic effects: it provides a better way to work with effects, so exceptions, generators, async, dependency injection, control over io, etc using just a single simple yet powerful and safe languge feature;
 * algebraic coeffects: it provides a better way to work with context, so a borrow checker and lifetimes alternative, features, better work with os-specific apis, safe dynamic scoping, etc. from a single feature;
 * refinement types: to reduce the need in runtime checks and enforce way more invariants with types (yeah this isn't that new, but afaik still not that widely used);
-* staged metaprogramming like in zig but with typeclasses.
+* generics with typeclasses and HKTs;
+* GADTs: more expressive data type definitions.
 
 ## Status of the project
 
