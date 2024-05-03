@@ -6,7 +6,7 @@ Why when there is rust/zig/etc? because i want algebraic effects, refinement typ
 
 These will be the main features:
 
-* algebraic effects: it provides a better way to work with effects, so exceptions, generators, async, dependency injection, control over io, etc using just a single simple yet powerful and safe languge feature;
+* algebraic effects: it provides a better way to work with effects, so exceptions, generators, async, dependency injection, control over io, etc using just a single simple yet powerful language feature;
 * refinement types: to reduce the need in runtime checks and enforce way more invariants with types;
 * powerful generics with typeclasses and HKTs;
 * compiletime code execution with type introspection and maybe macros based on first-class typed ast manipulations;
